@@ -38,6 +38,8 @@ class BalanceController extends Controller
         return response()->json(
             [
                 'subtotal' => $subTotal,
+                'plate' => $plate,
+                'minutes' => $diferenciaEnMinutos,
             ]
         );
     }

@@ -69,4 +69,15 @@ class ActivityController extends Controller
     {
         //
     }
+
+    public function setStatus($plate)
+    {
+        $activity = Activity::where('plate', $plate)
+            ->where('status', 'in_progress')
+            ->where('type', 'out')
+            ->firstOrFail();
+        $activity->status = 'finished';
+        $activity->save();
+        return response()->json($activity, 200);
+    }
 }
