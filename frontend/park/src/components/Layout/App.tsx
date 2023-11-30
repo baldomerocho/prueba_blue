@@ -8,8 +8,8 @@ function App() {
         <div>
             <Logo/>
             <div className="flex flex-row h-full">
-                <Sidebar/>
-                <Body/>
+                    <Sidebar/>
+                    <Body/>
             </div>
         </div>
     );
